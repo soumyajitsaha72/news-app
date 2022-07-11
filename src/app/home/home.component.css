@@ -1,0 +1,14 @@
+.container {
+    /* border: 1px solid black; */
+    margin: 0 10vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:400px) {
+    .container{
+        margin: 0 5vw;
+    }
+}

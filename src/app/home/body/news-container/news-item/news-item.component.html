@@ -1,0 +1,9 @@
+<div class="news-item">
+    <div class="news-item-img-container">
+        <img class="news-item-img" [src]="element.image_url" alt="">
+    </div>
+    <div class="news-item-heading">
+        <p>{{ element.title }}</p>
+        <a href="#" class="news-item-more" (click)="onClickReadMore(element)">read more -></a>
+    </div>
+</div>

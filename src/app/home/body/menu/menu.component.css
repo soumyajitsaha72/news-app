@@ -1,0 +1,30 @@
+.container-head {
+    margin: 0.5em 0;
+    border-top: 2px solid #928969;
+    border-bottom: 2px solid #928969;
+}
+
+.news-category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #c58f76;
+    margin: 0.2em 0;
+
+    /* To have responsive horizontal scroll menu */
+    overflow: auto;
+    white-space: nowrap;
+}
+
+/* Hide the scrollbar */
+.news-category::-webkit-scrollbar {
+    display: none; }
+  
+
+.news-category-link {
+    margin: 0.5em 1em;
+    background: none;
+    color: #e2e2cd;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}

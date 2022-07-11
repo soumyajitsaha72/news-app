@@ -1,0 +1,17 @@
+<div 
+    class="news-container" 
+    *ngIf="!isSelected"       
+    >
+    <!-- infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()" -->
+    <app-news-item *ngFor="let article of newsArticles | slice:0:10" [element]="article"></app-news-item>
+</div>
+
+
+
+
+<div class="news-item-selected" *ngIf="isSelected">
+    <button (click)="closeButtonClicked()">X</button>
+</div>
