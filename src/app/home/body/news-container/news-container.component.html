@@ -4,7 +4,7 @@
     </app-news-item>
 </div>
 
-<div class="back-to-top-button" (click)="backToTop()" *ngIf="showButton">
+<div class="back-to-top-button" (click)="backToTop()" *ngIf="showButton && !isSelected">
     <img src="../assets/arrow_up_icon.png" alt="back-to-top-button-img">
 </div>
 
