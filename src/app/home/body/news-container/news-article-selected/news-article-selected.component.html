@@ -1,0 +1,15 @@
+<div class="news-item-selected">
+    <div class="container">
+        <div class="navbar">
+            <button (click)="closeButtonClicked()" class="back-button">
+                <- back</button>
+                    <div class="navbar-heading">DETAIL NEWS</div>
+        </div>
+        <div class="article">
+            <div class="title">{{ article.title }}</div>
+            <div class="img"><img [src]="article.image_url" alt=""></div>
+            <div class="desc">{{ article.description }}</div>
+        </div>
+    </div>
+
+</div>

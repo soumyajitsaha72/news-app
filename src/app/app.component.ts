@@ -7,15 +7,16 @@ import { NewsApiService } from './shared/services/news-api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private newsService: NewsApiService) {}
+  constructor(private newsService: NewsApiService) { }
 
   ngOnInit() {
-    this.newsService.getNewsArticles().subscribe(
-      (articles) => {
-        for(let article of articles){
-          this.newsService.newsArticles.push(article);
+    this.newsService.fetchNewsArticles('all_news')
+      .subscribe(
+        (articles) => {
+          for (let article of articles) {
+            this.newsService.newsArticles.push(article);
+          }
         }
-      }
-    )
+      )
   }
 }

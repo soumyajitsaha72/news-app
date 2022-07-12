@@ -28,3 +28,8 @@
     text-decoration: none;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
+.news-category-link:hover {
+    cursor: pointer;
+    color: #9d533a;
+}

@@ -98,5 +98,7 @@
       }
     }
   },
-  "defaultProject": "news-app"
+  "cli": {
+    "analytics": false
+  }
 }

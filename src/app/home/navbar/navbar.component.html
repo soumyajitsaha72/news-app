@@ -1,5 +1,9 @@
 <div class="nav">
-    <div class="nav-heading"><h3>LATEST NEWS</h3></div>
-    <div class="nav-date">{{ dayArr[date['day']]+", "+monthArr[date['month']]+" "+date['date']+", "+date['year'] }}</div>
-    <div class="nav-search"><input class="search-box" type="text" placeholder="Search..."></div>
+    <div class="nav-heading">
+        <h3>LATEST NEWS</h3>
+    </div>
+    <div class="nav-date">{{ dayArr[date['day']]+", "+monthArr[date['month']]+" "+date['date']+", "+date['year'] }}
+    </div>
+    <div class="nav-search"><input class="search-box" type="text" placeholder="Search..." (input)="onInput(search)"
+            [(ngModel)]="search"></div>
 </div>

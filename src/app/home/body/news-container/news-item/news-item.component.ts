@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SelectedNewsArticle } from 'src/app/shared/services/selected-new-article.service';
 
 @Component({
   selector: 'app-news-item',
@@ -6,17 +7,17 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./news-item.component.css']
 })
 export class NewsItemComponent implements OnInit {
-  @Input() element
-  
-  constructor() { }
+  @Input() element: any;
+
+  constructor(private selectedNewsArticleService: SelectedNewsArticle) { }
 
   ngOnInit(): void {
   }
 
-
-  // WORK
-  onClickReadMore(article){
-    console.log(article);
+  onClickReadMore(article) {
+    // console.log(article);
+    this.selectedNewsArticleService.toggleSelected.emit(true);
+    this.selectedNewsArticleService.addNewsArticleSelected(article);
   }
 
 }

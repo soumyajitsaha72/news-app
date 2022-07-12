@@ -11,6 +11,10 @@ import { FooterComponent } from './home/footer/footer.component';
 import { MenuComponent } from './home/body/menu/menu.component';
 import { NewsContainerComponent } from './home/body/news-container/news-container.component';
 import { NewsItemComponent } from './home/body/news-container/news-item/news-item.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NewsArticleSelectedComponent } from './home/body/news-container/news-article-selected/news-article-selected.component';
+import { SearchPipe } from './shared/pipes/search/search.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,16 @@ import { NewsItemComponent } from './home/body/news-container/news-item/news-ite
     FooterComponent,
     MenuComponent,
     NewsContainerComponent,
-    NewsItemComponent
+    NewsItemComponent,
+    NewsArticleSelectedComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
