@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "news-app:build:production",
+            "firebaseProject": "latestnewsapp-84458",
+            "firebaseHostingSite": "latestnewsapp-84458"
+          }
         }
       }
     }

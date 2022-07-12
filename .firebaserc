@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "latestnewsapp-84458": {
+      "hosting": {
+        "news-app": [
+          "latestnewsapp-84458"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "latestnewsapp-84458"
+  }
+}
