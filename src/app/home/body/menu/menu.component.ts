@@ -7,15 +7,14 @@ import { NewsApiService } from 'src/app/shared/services/news-api.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  menuItems = ['all_news',
+  menuItems = ['all',
     'trending',
-    'top_stories',
+    'top',
     'national',
     'business',
     'politics',
     'sports',
     'technology',
-    'startups',
     'entertainment',
     'education',
     'world',
@@ -31,6 +30,13 @@ export class MenuComponent implements OnInit {
   }
 
   onClickMenuItem(item: string) {
+    if (item === "topics/trending") {
+      item = 'trending';
+    } else if (item === "topics/top") {
+      item = 'top';
+    } else if (item === "topics/all") {
+      item = 'all';
+    }
     this.newsService.fetchNewsArticles(item)
       .subscribe(
         (articles) => {

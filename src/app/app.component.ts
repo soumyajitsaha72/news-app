@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from './shared/article';
 import { NewsApiService } from './shared/services/news-api.service';
 
 @Component({
@@ -10,11 +11,11 @@ export class AppComponent implements OnInit {
   constructor(private newsService: NewsApiService) { }
 
   ngOnInit() {
-    this.newsService.fetchNewsArticles('all_news')
+    this.newsService.fetchNewsArticles('all')
       .subscribe(
         (articles) => {
           for (let article of articles) {
-            this.newsService.newsArticles.push(article);
+            this.newsService.newsArticles.push(new Article(article.title, article.content, article.imageUrl));
           }
         }
       )
